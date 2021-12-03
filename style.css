@@ -1,0 +1,279 @@
+    body {
+        background-color: #CC827B;
+        margin: 0;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        margin: 0;
+    }
+
+    .header {
+        background-color: #D9AFA0;
+        font-family: 'Abril Fatface', cursive;
+        position: sticky;
+        padding-top: 30px;
+        padding-bottom: 40px;
+        z-index: 1000;
+        font-size: 50px;
+        font-weight: 400px;
+        color: white;
+    }
+
+    .header_logo {
+        font-size: 50px;
+        font-weight: 700px;
+        margin: auto
+    }
+
+    .nav {
+        font-size: 17px;
+        text-transform: uppercase;
+        font-size: 30px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: row;
+    }
+
+    .nav_link {
+        color: white;
+        text-decoration: none;
+        transition: color .2s linear;
+        margin: 0 10px;
+        display: inline-block;
+        margin: auto 0;
+    }
+
+    .nav_link+.nav_link {
+        margin-left: 10px;
+    }
+
+    .nav_link:hover {
+        color: #BA584F;
+        text-decoration: underline;
+    }
+
+    .header_inner {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    .nav_link::after {
+        content: " ";
+        display: block;
+        width: 100%;
+        height: 3px;
+        color: black;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        z-index: 1;
+        opacity: 0;
+        transition: opacity .1s linear;
+        text-decoration: underline;
+    }
+
+    .nav_link:hover::after {
+        opacity: 1;
+        color: white;
+    }
+
+    .photo {
+        text-align: center;
+        margin: auto;
+    }
+
+    span {
+        margin-left: 5px;
+        font-size: 60px;
+        text-shadow: black 0px 0px 4px;
+        margin: auto
+    }
+
+    span:hover {
+        color: #BA584F;
+        transition: color .2s linear;
+    }
+
+    header {
+        background-image: linear-gradient(0deg, #CC827B 0%, rgba(0, 0, 0, 0) 10%), url(new_york-removebg-preview.png);
+        background-size: 250px;
+    }
+
+    @media screen and (max-width: 750px) {
+        header {
+            background-size: 400px;
+        }
+        .header_inner {
+            flex-direction: column;
+        }
+    }
+
+    .flexbox {
+        background: white;
+        width: 150px;
+        height: 60px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 70px;
+        float: right;
+    }
+
+    .search div {
+        margin-bottom: 20px;
+        cursor: pointer;
+    }
+
+    .search>div {
+        display: inline-block;
+        position: relative;
+        filter: drop-shadow(0 1px #BA584F);
+    }
+
+    .search>div:after {
+        content: "";
+        background: #BA584F;
+        width: 4px;
+        height: 20px;
+        position: absolute;
+        top: 40px;
+        right: 2px;
+        transform: rotate(145deg);
+    }
+
+    .search>div>input {
+        color: #BA584F;
+        font-size: 16px;
+        background: transparent;
+        width: 5px;
+        height: 5px;
+        padding: 10px;
+        border: solid 3px #BA584F;
+        outline: none;
+        border-radius: 35px;
+        transition: width 0.5s;
+        cursor: pointer;
+    }
+
+    .search>div>input::placeholder {
+        color: #BA584F;
+        opacity: 0;
+        transition: opacity 150ms ease-out;
+    }
+
+    .search>div>input:focus::placeholder {
+        opacity: 1;
+    }
+
+    .search>div>input:focus,
+    .search>div>input:not(:placeholder-shown) {
+        width: 100px;
+    }
+
+    .main {
+        padding: 15px;
+        font-family: 'Playfair Display', serif;
+        background: #CC827B;
+        font-weight: 600;
+        font-size: 20px;
+        color: white;
+        text-align: justify;
+    }
+
+    .text {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    #text_inner {
+        margin-bottom: 15px;
+    }
+
+    .big {
+        font-size: 35px;
+        text-shadow: black 0px 0px 4px;
+    }
+
+    .button {
+        background-color: white;
+        border-radius: 40px;
+        text-shadow: black 0px 0px 4px;
+        width: 50px;
+        height: 50px;
+        margin-bottom: -300px;
+        z-index: 100;
+        position: relative;
+        font-family: 'Abril Fatface', cursive;
+        text-transform: uppercase;
+        cursor: pointer;
+    }
+
+    .img {
+        width: 400px;
+        height: 300px;
+        z-index: 20;
+        margin-left: 10px;
+        margin: 0 auto;
+    }
+
+    .img img {
+        width: 100%;
+    }
+
+    .clouds {
+        text-align: center;
+        margin-top: 200px;
+        margin: 120px;
+        justify-content: space-between;
+    }
+
+    #cloud1 {
+        margin-left: 3px;
+    }
+
+    #cloud2 {
+        margin-right: 10px;
+    }
+
+    .footer {
+        background-color: #400D01;
+        padding: 5px;
+    }
+
+    .question {
+        text-align: center;
+        color: white;
+        font-size: 20px;
+        font-style: 'Playfair Display', serif;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .href {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    #socials {
+        margin-left: 10px;
+    }
+
+    .href a {
+        color: white;
+        font-family: 'Abril Fatface', cursive;
+        font-size: 20px;
+        text-align: center;
+    }
+
+    .href a+a {
+        margin-left: 20px;
+    }
+
+    i {
+        color: white;
+    }

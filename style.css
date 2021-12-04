@@ -20,9 +20,7 @@
     }
 
     .header_logo {
-        font-size: 50px;
-        font-weight: 700px;
-        margin: auto
+        margin: auto;
     }
 
     .nav {
@@ -44,7 +42,10 @@
     }
 
     .nav_link+.nav_link {
-        margin-left: 10px;
+        margin-left: 20px;
+    }
+    .nav_link+.flexbox{
+        margin-left: 20px;
     }
 
     .nav_link:hover {
@@ -100,15 +101,6 @@
         background-size: 250px;
     }
 
-    @media screen and (max-width: 750px) {
-        header {
-            background-size: 400px;
-        }
-        .header_inner {
-            flex-direction: column;
-        }
-    }
-
     .flexbox {
         background: white;
         width: 150px;
@@ -137,7 +129,7 @@
         width: 4px;
         height: 20px;
         position: absolute;
-        top: 40px;
+        top: 37px;
         right: 2px;
         transform: rotate(145deg);
     }
@@ -169,6 +161,30 @@
     .search>div>input:focus,
     .search>div>input:not(:placeholder-shown) {
         width: 100px;
+    }
+
+    @media screen and (max-width: 750px) {
+        .main_text, #text_inner{
+            font-size: 15px !important;
+        }
+        .big{
+            font-size: 25px !important
+        }
+        span{
+            font-size: 45px;
+        }
+        header {
+            background-size: 400px;
+        }
+        .header_inner {
+            flex-direction: column;
+        }
+        .nav{
+            font-size: 25px;
+        }
+        .search>div:after {
+            top: 30px;
+        }
     }
 
     .main {
@@ -211,8 +227,7 @@
     }
 
     .img {
-        width: 400px;
-        height: 300px;
+       
         z-index: 20;
         margin-left: 10px;
         margin: 0 auto;
@@ -221,12 +236,11 @@
     .img img {
         width: 100%;
     }
-
-    .clouds {
-        text-align: center;
-        margin-top: 200px;
-        margin: 120px;
-        justify-content: space-between;
+    .clouds{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
     }
 
     #cloud1 {
@@ -245,6 +259,7 @@
     .question {
         text-align: center;
         color: white;
+
         font-size: 20px;
         font-style: 'Playfair Display', serif;
         display: flex;
